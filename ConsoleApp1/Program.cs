@@ -33,7 +33,7 @@ namespace ConsoleApp1
             decimal dec = 5; // 8 byte
             double db = 5; // 16 byte
 
-            char ch = "M"; // 2 byte
+            char ch  ; // 2 byte
             string merve = "MErve kasal falan"; // sınırsız
 
 
@@ -49,7 +49,7 @@ namespace ConsoleApp1
 
             // string ifadeler
 
-            string = str1 = string.Empty;
+            string  str1 = string.Empty;
             str1 = "Mimilota";
             string ad = "MErve";
             string soyad = "Kasal";
@@ -78,6 +78,14 @@ namespace ConsoleApp1
 
             string datetime1 = DateTime.Now.ToString("MM.dd.yyyy"); // aralarinda noktalarla ay gun yıl verir
             string datetime2 = DateTime.Now.ToString("hh:mm"); // arasında iki noktayla saati ve dakikayi verir
+
+
+
+
+            //****************OPERATORLER************************//
+
+
+
 
 
 
