@@ -85,7 +85,49 @@ namespace ConsoleApp1
             //****************OPERATORLER************************//
 
 
+            // atama ve islemli atama
 
+
+            int x = 2;
+            int y = 3;
+            y = y + 2; //deger 5
+
+            x += 3; // deger 5
+            y /= 5; // y 5 olmustu bolu esit ile 1e esitledik
+
+            x *= 4; // 5 olmustu 5 ile 4 carpip x'e esitledik
+
+            // Mantiksal operatorler
+
+            bool IsSuccess = true;
+            bool IsCompleted = false;
+
+            if (IsSuccess && IsCompleted)
+                Console.WriteLine("Perfect");
+
+            if (IsSuccess || IsCompleted)
+                Console.WriteLine("Maybe perfect");
+
+            if (!IsSuccess && !IsCompleted)
+                Console.WriteLine("Not good :(");
+
+
+            if (!IsSuccess || !IsCompleted)
+                Console.WriteLine("Maybe Not good, maybe not :(");
+
+
+            // iliskisel operatorler =, <,>, != ,>= . <=
+
+            int x = 8;
+            int y = 6;
+            bool sonuc = x < y; // bunlar bool doner x yden kucuk mu hayir sonuc boolu false
+
+            // aritmetik operatorler + - * / % //
+
+            int merveM = 20;
+            int mimi = 3;
+            int modluSonuc = merveM % mimi; // mod aliyor yni iki sayinin bolumunden klani hesapliyor. 
+            // 20 bolu 3ten kaln 2 bu yuzden mod 2
 
 
 
