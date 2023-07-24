@@ -345,7 +345,49 @@ namespace ConsoleApp1
                 Console.ReadLine();
             }
 
-        }
+
+            //**************while int sayac = 1;
+            int sayac = 0;
+            Console.WriteLine("donguler icin sayi girin");
+            int inputSayi = int.Parse(Console.ReadLine()); // inputu integera cevirip sayac degiskenine atadık
+            while (sayac <= inputSayi) // sayac inputSayıya gelene kadar, ki girilen sayi da dahil
+            {
+                Console.WriteLine(sayac); //0'dan baslayrak
+                sayac++; // 1 1 arttırarak
+            }
+
+            int toplamSayilar=0;
+            while (sayac <= inputSayi) // unutma aynı sayacı kullanıyorsun bu yuzden bu donguye geldiginde sayac da yukarıda coktan islenmis olan sayı oluyor ve donguye giremeyip sonucu 0 yazdırıyor. yukarıdakileri yorum satırına alırsan ya da farklı bir sayac tanımlarsan her gayet guzel calisiyor
+            {
+                
+                toplamSayilar += sayac; // dongudeki her sayac degeri toplanıp toplamSayılar degiskenine atanacak ta ki girilen sayiya erisene kadar
+                sayac++;
+            }
+            Console.WriteLine(toplamSayilar); // dongu bitince konsola yazılacak
+            Console.ReadLine();
+
+
+            // Adan Z'ye kaVar harfleri yazdırma
+            char character = 'a';  // char tanımlanırken tek tırnak kullanılır unutma
+            while(character<= 'z')
+            {
+                Console.WriteLine(character);
+                character++; // char lara da ++ kullanabiliyoruz
+            }
+
+
+
+            //**********foreach loop
+            // foreach kullanmak icin bir arraye ihtiyacımız var
+
+            string[] arabalar = { "ford", "bmw", "togg", "maserati" };
+
+            foreach (var item in arabalar) // foreach yapisinda ++ ile iteration yapmaya gerek yok foreach bizim icin yapıyor
+            {
+                Console.WriteLine(item); 
+                Console.ReadLine();
+            }
+         }
 
 
 
