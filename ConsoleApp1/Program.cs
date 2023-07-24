@@ -173,7 +173,27 @@ namespace ConsoleApp1
             rakam2 = double.Parse(metin2); // yukaridaki aciklamanin aynisi sadece donusturulmek istenen veri farklı
 
 
+            ///******************************  Try Catch Finally ***********************//////////
+            ///
 
+            try
+            { // burada bir hata olusursa catch calisacak
+                int a = int.Parse(Console.ReadLine()); // kullanicidan veri aldik int degiskene atadik
+
+                int b = int.Parse(Console.ReadLine()); // aynisini buradada yaptik
+
+                int c = a + b;
+
+                Console.WriteLine(c);
+            }
+            catch (Exception ex) // hangi hata olursa olsun bir hata olustu yazarak hata mesajını ekrana verecek
+            {
+                Console.WriteLine("Bir Hata Oluştu: " + ex.Message);
+            }
+            finally // try ya da catch calismasi fark etmeksizin islem sonrası burasi calisacak
+            {
+                Console.WriteLine("İşlem tamamlandı.");
+            }
 
 
 
