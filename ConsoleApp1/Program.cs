@@ -33,7 +33,7 @@ namespace ConsoleApp1
             decimal dec = 5; // 8 byte
             double db = 5; // 16 byte
 
-            char ch  ; // 2 byte
+            char ch = 'M'  ; // 2 byte
             string merve = "MErve kasal falan"; // sınırsız
 
 
@@ -128,6 +128,52 @@ namespace ConsoleApp1
             int mimi = 3;
             int modluSonuc = merveM % mimi; // mod aliyor yni iki sayinin bolumunden klani hesapliyor. 
             // 20 bolu 3ten kaln 2 bu yuzden mod 2
+
+
+
+
+            //************TYPE Conversions******************
+
+            // implicit Conversion 
+
+
+            byte a = 5;
+            sbyte b = 10;
+            short c = 15;
+
+            int i = a + b
+
+            long h = i;
+
+            float g = h // ayni sayiyi oradan oraya veri tipini degistiebiliyoruz
+
+
+
+            // explicit Conversions
+
+            int x = 4;
+            byte y = (byte)x; // bu yontem ile parantez sagindki veri parantez icerisindeki veriye donusturulebiliyor
+
+            int xx = 6;
+            string yy = xx.ToString(); // veri . tostring metodu ile veriyi stringe cevirebiliyoruz.
+
+
+            string bla = "5";
+            string blaa = "8";
+            int blablaa = Convert.ToInt32(bla) + Convert.ToInt32(blaa); // convert.toint() ile parantez icerisine yazmis oldugumuz degiskeni int'e onusturebiliyoruz.
+
+
+            string metin1 = "18";
+            string metin2 = "15";
+
+            int rakam1;
+            double rakam2;
+
+            rakam1 = Int32.Parse(metin1); // donusturulecek olan veri tipi ve parse methodu ile methodu icerisine yazdıgımız veriyi ilk yazdıgımız veriye donusturuyor.
+            rakam2 = double.Parse(metin2); // yukaridaki aciklamanin aynisi sadece donusturulmek istenen veri farklı
+
+
+
 
 
 
