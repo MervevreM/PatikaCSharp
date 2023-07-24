@@ -387,7 +387,37 @@ namespace ConsoleApp1
                 Console.WriteLine(item); 
                 Console.ReadLine();
             }
-         }
+
+
+
+
+
+            //************* arrays and foreach loop ************
+
+
+            int[] Sayidizi = new int[10];// 10 elemanlı int olan array olusturduk
+            Sayidizi[2] = 8; // dizinin 2. indexine 8 elemanını atadık
+
+
+            string[] renkler = { "Mavi", "Kırmızı", "Sarı", "Yeşil" }; // renkler adında string elemanlar alan dizi tanımladık ve elemanlarını verdik
+
+            string[] renklerdizi = { "Mavi", "Kırmızı", "Sarı", "Yeşil" };
+            string renk = renklerdizi[1]; // renk string degiskenine dizinin 1. indezindeki elemanı verdik yani kırmızıyı
+
+            int[] sayiDizisi = new int[20]; // 20 elemanlı olacak bir dizi tanımladık
+            int toplam = 0;
+            for (int ipp = 0; ipp < sayiDizisi.Length; ipp++)
+            {
+                Console.Write("Lütfen {0}. sayıyı girin:", ipp + 1); // yazılacak olam mesajdaki süslülerin içine virgulden sonraki gelecek. +1 dedik cunku i 0'dan baslayacak ve kullnıcıya 0. sayıyı gir demek mantıksız.
+                sayiDizisi[ipp] = Convert.ToInt32(Console.ReadLine()); // girdileri intledik ki matematiksel islem yapabilelim
+                toplam += sayiDizisi[ipp];
+            }
+            double ortalama = toplam / 20;
+            Console.WriteLine("Sayıların ortalaması: " + ortalama);
+            Console.ReadLine();
+        }
+
+
 
 
 
