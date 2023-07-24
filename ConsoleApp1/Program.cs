@@ -207,12 +207,12 @@ namespace ConsoleApp1
                 int TimeNow = DateTime.Now.Hour;
 
 
-                if ( TimeNow >= 6 && TimeNow <= 11 )
+                if (TimeNow >= 6 && TimeNow <= 11)
                 {
                     Console.WriteLine("GÜnaydın");
                     Console.ReadLine();
                 }
-                else if ( TimeNow >=12 && TimeNow <= 19)
+                else if (TimeNow >= 12 && TimeNow <= 19)
                 {
                     Console.WriteLine("İyi ksamlar");
                     Console.ReadLine();
@@ -232,7 +232,7 @@ namespace ConsoleApp1
                 Console.WriteLine(sonucMesaj);
                 Console.ReadLine();
 
-
+             }
 
                 //********************* switchCase *****************
 
@@ -298,19 +298,66 @@ namespace ConsoleApp1
                         break;
                 }
 
+            //************* for dongusu ***********************
+
+
+            // kullanıcıdan alınan sayıya kadar olan tek sayıları yazdırma
+
+            Console.WriteLine("Bir sayı giriniz:"); // kullanıcıyı yonlendirecek bir mesaj girdik. console.writeline() girdiyi altına alır. 
+            // console.Write() metodu girdiyi mesaj bitimin alır direkt
+            int UserInput = int.Parse(Console.ReadLine()); // int parse kullandık cunku girdiler her zaman string olarak alınır. console.readline mtodu ile inputu iceri aldık
+
+            for (int iii = 0; iii < UserInput; iii++)
+            {
+                if (iii % 2 == 1)
+                {
+                    Console.WriteLine(iii);
+                }
+            }
+            Console.ReadLine(); // islem bittikten sonra konsolda olusanı gormek için yazdım yoksa pıt diye kapanıyor
+
+
+
+            //***** kullanıcıdan alınan veriye kadar tek ve cift sayıların ayrı ayrı toplamını alma
+            int tekToplam = 0;
+            int ciftToplam = 0;
+            for (int iy = 0; iy < UserInput; iy++)
+            {
+                if (iy % 2 == 0)
+                    ciftToplam += iy;
+                else
+                    tekToplam += iy;
+            }
+            Console.WriteLine("TEk Toplam : " + tekToplam);
+            Console.WriteLine("Cift Toplam : " + ciftToplam);
+            Console.ReadLine();
+
+            //**** break and continue
+
+            for (int ix = 0; ix < 10; ix++)
+            {
+                
+                if (ix == 8)
+                    break; // ix degiskeni 8 olunca donguden cıkacak.
+                if (ix == 3)
+                    continue; // ix degiskeni 3 olunca altındakileri bosverip bir diger arttırmaya gececektir. Ki bu; su andaki kodda 3 u yazdırmayacak demektir
+                Console.WriteLine(ix);
+                Console.ReadLine();
             }
 
-
-
-
-
-
-
-
-
-
-
-
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }
