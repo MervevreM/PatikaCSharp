@@ -232,6 +232,72 @@ namespace ConsoleApp1
                 Console.WriteLine(sonucMesaj);
                 Console.ReadLine();
 
+
+
+                //********************* switchCase *****************
+
+
+                int monthIn = DateTime.Now.Month; // datetime month integer donu ve monthIn degiskenine atandı
+
+                switch (monthIn) // her ay icin case yazildı
+                {
+                    case 1:
+                        Console.WriteLine("Ocak ayındasınız");
+                        break;
+                    case 2:
+                        Console.WriteLine("Şubat ayındasınız");
+                        break;
+                    case 3:
+                        Console.WriteLine("Mart ayındasınız");
+                        break;
+                    case 4:
+                        Console.WriteLine("Nisan ayındasınız");
+                        break;
+                    case 5:
+                        Console.WriteLine("Mayıs ayındasınız");
+                        break;
+                    case 6:
+                        Console.WriteLine("Haziran ayındasınız");
+                        Console.ReadLine();
+                        break;
+                    case 7:
+                        Console.WriteLine("Temmuz ayındasınız");
+                        Console.ReadLine();
+                        break;
+                    default:
+                        Console.WriteLine("bilmem");
+                        break;
+
+                }
+
+                switch (monthIn) // caseleri bu sekilde gruplayabiliyoruz
+                {
+                    case 12:
+                    case 1:
+                    case 2:
+                        Console.WriteLine("Kış mevsimindesiniz");
+                        Console.ReadLine();
+                        break;
+                    case 3:
+                    case 4:
+                    case 5:
+                        Console.WriteLine("İlkbahar mevsimindesiniz");
+                        Console.ReadLine();
+                        break;
+                    case 6:
+                    case 7:
+                    case 8:
+                        Console.WriteLine("yaz mevsimindesiniz");
+                        Console.ReadLine();
+                        break;
+                    case 9:
+                    case 10:
+                    case 11:
+                        Console.WriteLine("Sonbahar mevsimindesiniz");
+                        Console.ReadLine();
+                        break;
+                }
+
             }
 
 
