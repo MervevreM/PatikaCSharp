@@ -118,9 +118,9 @@ namespace ConsoleApp1
 
             // iliskisel operatorler =, <,>, != ,>= . <=
 
-            int x = 8;
-            int y = 6;
-            bool sonuc = x < y; // bunlar bool doner x yden kucuk mu hayir sonuc boolu false
+            int xxx = 8;
+            int yxy = 6;
+            bool sonuc = xxx < yxy; // bunlar bool doner x yden kucuk mu hayir sonuc boolu false
 
             // aritmetik operatorler + - * / % //
 
@@ -137,22 +137,22 @@ namespace ConsoleApp1
             // implicit Conversion 
 
 
-            byte a = 5;
-            sbyte b = 10;
+            byte abc = 5;
+            sbyte bec = 10;
             short c = 15;
 
-            int i = a + b
+            int ii = abc + bec;
 
-            long h = i;
+            long h = ii;
 
-            float g = h // ayni sayiyi oradan oraya veri tipini degistiebiliyoruz
+            float g = h; // ayni sayiyi oradan oraya veri tipini degistiebiliyoruz
 
 
 
             // explicit Conversions
 
-            int x = 4;
-            byte y = (byte)x; // bu yontem ile parantez sagindki veri parantez icerisindeki veriye donusturulebiliyor
+            int xa = 4;
+            byte yyyy = (byte)xa; // bu yontem ile parantez sagindki veri parantez icerisindeki veriye donusturulebiliyor
 
             int xx = 6;
             string yy = xx.ToString(); // veri . tostring metodu ile veriyi stringe cevirebiliyoruz.
@@ -178,11 +178,11 @@ namespace ConsoleApp1
 
             try
             { // burada bir hata olusursa catch calisacak
-                int a = int.Parse(Console.ReadLine()); // kullanicidan veri aldik int degiskene atadik
+                int ab = int.Parse(Console.ReadLine()); // kullanicidan veri aldik int degiskene atadik
 
-                int b = int.Parse(Console.ReadLine()); // aynisini buradada yaptik
+                int be = int.Parse(Console.ReadLine()); // aynisini buradada yaptik
 
-                int c = a + b;
+                int cL = ab + be;
 
                 Console.WriteLine(c);
             }
@@ -194,6 +194,49 @@ namespace ConsoleApp1
             {
                 Console.WriteLine("İşlem tamamlandı.");
             }
+
+            ZamanaGoreSelam();
+
+
+
+            // ******************* If else if and ternary if**************
+            // 
+
+             void ZamanaGoreSelam()
+            {
+                int TimeNow = DateTime.Now.Hour;
+
+
+                if ( TimeNow >= 6 && TimeNow <= 11 )
+                {
+                    Console.WriteLine("GÜnaydın");
+                    Console.ReadLine();
+                }
+                else if ( TimeNow >=12 && TimeNow <= 19)
+                {
+                    Console.WriteLine("İyi ksamlar");
+                    Console.ReadLine();
+                }
+                else
+                {
+                    Console.WriteLine("İyi Geceler");
+                    Console.ReadLine();
+                }
+
+
+                // boyle mini kosullari tek satir da yazabiliyoruz.
+
+                // string sonucMesaj = TimeNow < 6 ? "Gunaydin" : "İyi gunler";
+
+                string sonucMesaj = TimeNow >= 6 && TimeNow <= 11 ? "Gunaydin" : TimeNow >= 12 && TimeNow <= 19 ? "iyi gunler" : "İyi geceler";
+                Console.WriteLine(sonucMesaj);
+                Console.ReadLine();
+
+            }
+
+
+
+
 
 
 
