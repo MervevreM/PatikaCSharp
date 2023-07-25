@@ -415,6 +415,51 @@ namespace ConsoleApp1
             double ortalama = toplam / 20;
             Console.WriteLine("Sayıların ortalaması: " + ortalama);
             Console.ReadLine();
+
+
+
+
+            //*********************************** Array Methods***************
+
+            int[] sayidizisi = [75, 58, 5, 4, 8, 25, 69, 88];
+
+            // diziyi sırasız yazdırmak için
+
+            foreach (var item in sayidizisi)
+            {
+                Console.WriteLine(item);
+            }
+
+
+            // diziyi sıralı yazdırmak için
+            Array.Sort(sayidizisi); // bu method sayesinde dizimiz kucukten buyuge siralaniyor
+            foreach (var item in sayidizisi)
+            {
+                Console.WriteLine(item);
+            }
+
+            // diziyi belirledigimiz bir index numarasından baslyarak belirledigimiz sır kadar elemanı sıfırlama, silme
+
+            Array.Clear(sayidizisi, 3, 1); //3. indexten baslayarak bir tane silecek yani yalnızca 3. indexteki silinecek 1 yerine 4 yazsaydık 3. indexten baslayıp 4 elemanı silecekti
+            foreach (var item in sayidizisi)
+            {
+                Console.WriteLine(item);
+            }
+
+            // diziyi tersten yazdıran metod
+
+            Array.Reverse(sayidizisi); // dizinin guncel sırasını tam tersinden yzdıracak
+
+            // istenen elemanın indexini veren metod
+
+            Array.IndexOf(sayidizisi, 8); // 8 elemanının indexini verecek
+
+            // dizinin boyutunu arttıran metod
+
+            Array.Resize<int>(ref sayidizisi, 10); // resize metodunda parantez acmadan once carrot icerisine dizinin turu yazılır.
+                                                   // Parantez acıldıktan sonra ref keyword ile dizi ismi verilir ve donusturulmek istenen eleman sayısı verilir
+            sayidizisi[8] = 64;//index 8 = 9.eleman  // dizimiz 8 elemanlıydı 10 elemanlı yaptık simdi de bos kalan 9 ve 10. elemana atama yapalım
+            sayidizisi[9] = 60;
         }
 
 
