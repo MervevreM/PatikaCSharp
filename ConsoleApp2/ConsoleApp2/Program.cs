@@ -8,6 +8,10 @@ namespace ConsoleApp2
 {
     class Program
     {
+
+        /* method overloading = ayni isme sahip farkli methodlar yazabiliriz. 
+         * methodlar method imzalariyla unique hale gelir (method imzası  = methos adi + parametre sayisi + parametre tipi) ile olusur
+         * yani toplam adinda birden fazla method olusturabiliriz fakat uniqulestirmek icin parametre sayisi ya da tipini degistirmemiz gerekir.*/
         static void Main(string[] args)
         {
 
@@ -47,13 +51,37 @@ namespace ConsoleApp2
 
             #endregion
 
+            #region OUT keyword kullanimi ve cagirma
+
+            /* out keyword bize method icerisinde yapilan islem sonucunu cekebilmemizi saglar ama onu consola falan yazabiliyoruz
+             *  return gibi isleme sokamiyoruz ya da degiskene atayamiyoruz sanirim. 
+             * Su sekilde kullanilir:
+             * 
+             * erisimTipi void methodAdi(foksiyonİcindeKullanilanParametreler, out donenVeriTuru donenVerininAdi){}
+             * 
+             */
+
+            YineTopla(a, b, out int outluSonucum);
+            Console.WriteLine(outluSonucum); // void methoddan veriyi aldim. return gibi ama tam da degil biraz karisikmis degiskene atamama izin vermedi 
+
+            #endregion
+
         }
 
-        #region ayni sinif icerisinde olusturulmus method
+        #region ayni sinif icerisinde olusturulmus method ornegi
         static int toplayici(int value1, int value2) // parametrelerin tipini yazmayi unutma az once unuttum
         {
 
             return (value1 + value2);
+        }
+
+        #endregion 
+
+        #region Out keyword kullanimina ornek method olusturma
+
+        static void YineTopla(int value1,int value2, out int outluToplam) // void dedim ama sonucu kullanabiliyoruz ama readonly gibi daha cok yukarida cagirip yapicam
+        {
+            outluToplam = value1 + value2;
         }
 
         #endregion
