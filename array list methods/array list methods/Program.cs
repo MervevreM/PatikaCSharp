@@ -11,6 +11,9 @@ namespace array_list_methods
     {
         static void Main(string[] args)
         {
+            //standart dizilerde veri tipi ayni olmali ve isleme baslamadan once eleman sayisi belirtilmelidir
+            //fakat array listlerde boyle bir kural yoktur. İstedigin zaman eleman ekler cikarir
+            //ve listeye dinamiklik kazandirabilirsin
 
             ArrayList liste = new ArrayList(); // arraylist olusturduk
             liste.Add("merve"); // array listlere her tipten veri atabiliriz. Yaparken de add methodunu kullaniriz
