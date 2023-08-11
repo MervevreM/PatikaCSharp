@@ -8,7 +8,7 @@ namespace collection_question3
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Bir cümle giriniz");
+            Console.WriteLine("Bir cümle giriniz"); 
             string sentence = Console.ReadLine();
 
             ArrayList vowels = new ArrayList();
