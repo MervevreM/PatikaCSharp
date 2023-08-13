@@ -25,7 +25,7 @@ namespace Static_Class
                                                                     // uygulanacak ve ilk calismada 0'a set edilmis olan sayı 1 olacak
             Console.WriteLine("Number of employees ; {0}", employee.employeeTotalNumberr);
 
-            Console.ReadLine();
+            Console.ReadLine(); 
         }
     }
 
