@@ -29,7 +29,7 @@ namespace Inheritance
 
             surungenler surungen1 = new surungenler();
             surungen1.surunerekHareketEtme();
-            Console.ReadLine();
+            Console.ReadLine(); 
         }
     }
 
