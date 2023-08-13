@@ -9,6 +9,8 @@ namespace Static_Class
     class Program
     {
         /* static constructorlar classa ilk erisimde 1 kez calisirlar. 
+         * static property ve methodlara erisirken instance almaya gerek yoktur class adı nokta ile static ozellikteki fieldlara erisebiliriz
+         * consol writeline alanlarında instance almadan static fildlara eristik asagıda gorebilirsin
          * */
         static void Main(string[] args)
         {
@@ -18,6 +20,7 @@ namespace Static_Class
                                                                                            // calisti bir sonraki class
                                                                                            // eylemimde static constructora
                                                                                            // girilmicek
+
             employee employee1 = new employee("merve", "kasal", 8); // classa eristim ve bir instance aldım parmetre alan constructor ile
                                                                     // ama ustte ilk kez static
                                                                     // constructora erisip calisan sayısını bir yapmıstı zaten
